@@ -32,3 +32,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### db configuration ###
+application-db.properties
