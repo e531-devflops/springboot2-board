@@ -18,7 +18,7 @@
         <div class="card-body">
             <h5 class="card-title" th:text="@{${post.title} + ' - ' + ${post.author}}"></h5>
             <p class="card-text"><small class="text-muted" th:text="${#temporals.format(post.createdDate, 'yyyy-MM-dd HH:mm')}"></small></p>
-            <p class="card-text" th:text="${post.content}"></p>
+            <div class="card-text" th:utext="${post.content}"></div>
         </div>
     </div>
     <div class="row mt-3">
@@ -34,12 +34,7 @@
         </div>
     </div>
     <div class="row mt-3">
-        <script src="https://utteranc.es/client.js"
-                repo="strixqlater/board-comments"
-                issue-term="pathname"
-                theme="github-light"
-                crossorigin="anonymous"
-                async>
+        <script src="https://utteranc.es/client.js" repo="strixqlater/board-comments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async>
         </script>
     </div>
 </div>

@@ -37,7 +37,18 @@
         </div>
     </form>
 </div>
+<script src="https://cdn.ckeditor.com/ckeditor5/21.0.0/classic/ckeditor.js"></script>
 <script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
 <script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#inputContent'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+</script>
 </body>
 </html>
