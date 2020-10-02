@@ -1,6 +1,6 @@
 package kr.daoko.board.dto;
 
-import kr.daoko.board.domain.entity.Board;
+import kr.daoko.board.domain.entity.Post;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -8,8 +8,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
-public class BoardDto {
+public class PostDto {
     private Long id;
     private String author;
     private String title;
@@ -17,8 +16,8 @@ public class BoardDto {
     private LocalDateTime createdDate;
     private LocalDateTime modifiedDate;
 
-    public Board toEntity() {
-        Board build = Board.builder()
+    public Post toEntity() {
+        Post build = Post.builder()
                 .id(id)
                 .author(author)
                 .title(title)
@@ -29,7 +28,7 @@ public class BoardDto {
     }
 
     @Builder
-    public BoardDto(Long id, String author, String title, String content, LocalDateTime createdDate, LocalDateTime modifiedDate) {
+    public PostDto(Long id, String author, String title, String content, LocalDateTime createdDate, LocalDateTime modifiedDate) {
         this.id = id;
         this.author = author;
         this.title = title;
